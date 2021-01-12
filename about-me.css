@@ -1,0 +1,271 @@
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* ==== BASE STYLES ==== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: Oswald, sans-serif;
+  padding: 0.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: rgb(85, 16, 232);
+  letter-spacing: 0.5rem;
+ }
+
+.product-img {
+  width: 100%;
+}
+
+a {
+  color: #338;
+}
+
+/* ==== LAYOUT STYLES ==== */
+
+
+.name-headline p {
+  font-size: 0.7rem;
+  display: inline;
+}
+
+.fa-map-marker {
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+}
+
+.profile-image-box {
+  width: 35%;
+}
+
+.profile-img {
+  width: 6.875em;
+  height:7.5em;
+  border-radius: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-info {
+  background-color: #303030;
+  box-shadow: hsla(0, 0%, 0%, .8) 0px 0px 15px;
+  position: relative;
+ }
+
+.head-info:hover {
+  background-color: #336;
+  box-shadow: rgb(85, 16, 232) 0px 0px 12px; 
+}
+
+.name-headline {
+  position: absolute;
+  width: 65%;
+  top: 0px;
+  right: 0px;
+  color: rgb(248, 248, 255);
+  text-align: center;
+}
+
+.profile-image-box {
+  top: 0 px;
+  left: 0 px;
+}
+
+.head-info::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media (max-width: 680px) {  
+  .profile-image-box, .name-headline {
+    float: none;
+    width: auto;
+    position: relative;
+    margin-top: 2%;
+  }
+  
+  .head-info {
+    height: 45vh;
+  }
+  
+  .profile-img {
+    position: relative;
+    top: 0.5rem;   
+  }
+  
+  .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 260px) {    
+  .head-info {
+    height: 53vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  .head-info {
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    float: left; 
+  }
+}
+
+
+/* === CONTENT STYLES === */
+
+.logo {
+  width: 6.25em;
+  height: 6.25em;
+  float: right;
+  margin: 0.625em;
+}
+
+.content {
+  background-color: #E8E8E8;
+  width: 95%;
+  margin: auto;
+  padding: 0.625rem; 
+}
+
+
+section {
+  margin-top: 1.25em;
+  border-top: 1px solid hsla(0, 0%, 30%, 0.7);
+  text-align: center;
+  clear: both;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.fa-etsy {
+  font-size: 1.5em;
+  padding: 0.3125em;
+  font-weight: 1000;
+}
+
+.fa-facebook-square, .fa-youtube-play {
+  padding: 0.3125em;
+}
+
+.fa-facebook-square:hover {
+  color: #1919e6 ;
+  font-size: 250%;
+  text-shadow: 2px 2px 5px #333;
+  
+}
+
+.fa-etsy:hover {
+  color: #FF4500;
+  font-size: 200%;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.fa-youtube-play:hover {
+  color: #FF0000;
+  font-size: 250%;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.fa:hover {
+  padding: 0px;
+}
+
+li {
+  display: inline-block;
+  padding: 0.625em;
+}
+
+.title {
+  padding-top: 0.625em;
+  color: #338;
+  font-weight: 1000;
+  font-size: 0.875em;
+}
+
+@media (min-width: 1025px) {
+  .content {
+    float: none;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    max-width: 812px;
+    height: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
